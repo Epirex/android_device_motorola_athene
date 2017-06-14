@@ -142,6 +142,8 @@ camera.display.lmax=1280x720
 camera.display.umax=1920x1080
 persist.camera.HAL3.enabled=0
 camera.hal1.packagelist=com.skype.raider
+ro.media.dec.jpeg.memcap=80000
+ro.media.enc.hprof.vid.bps=80000
 
 # CNE
 persist.cne.feature=1
