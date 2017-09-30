@@ -19,8 +19,7 @@ $(call inherit-product, vendor/aosp/common.mk)
 $(call inherit-product, device/motorola/athene/full_athene.mk)
 
 # Boot animation
-TARGET_SCREEN_WIDTH := 1080
-TARGET_SCREEN_HEIGHT := 1920
+TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_BOOTANIMATION_HALF_RES := true
 
 ## Device identifier. This must come after all inclusions
