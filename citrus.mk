@@ -14,7 +14,7 @@
 # limitations under the License.
 
 # Inherit some common Citrus CAF stuff.
-$(call inherit-product, vendor/citrus/config/common_full_phone.mk)
+$(call inherit-product, vendor/citrus/common.mk)
 
 $(call inherit-product, device/motorola/athene/full_athene.mk)
 
