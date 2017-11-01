@@ -29,3 +29,7 @@ PRODUCT_NAME := citrus_athene
 PRODUCT_BRAND := Motorola
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_RELEASE_NAME := athene
+
+# Citrus-CAF Athene Maintainer
+PRODUCT_BUILD_PROP_OVERRIDES += \
+         DEVICE_MAINTAINERS="Esteban Guzzo (Epirex)"
