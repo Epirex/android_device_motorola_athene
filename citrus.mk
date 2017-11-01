@@ -33,3 +33,7 @@ PRODUCT_RELEASE_NAME := athene
 # Citrus-CAF Athene Maintainer
 PRODUCT_BUILD_PROP_OVERRIDES += \
          DEVICE_MAINTAINERS="Esteban Guzzo (Epirex)"
+
+# CAF REVISION
+PRODUCT_PROPERTY_OVERRIDES += \
+         ro.caf.branch=LA.UM.5.6.r1-05900-89xx.0
