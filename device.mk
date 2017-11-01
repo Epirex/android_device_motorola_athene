@@ -103,18 +103,12 @@ PRODUCT_COPY_FILES +=  \
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8952 \
-    libbson
+    libbson \
+    Snap
 
 # Gestures
 PRODUCT_PACKAGES += \
     Gestures
-
-# Snap Apps
-PRODUCT_PACKAGES += \
-    Snap \
-    SnapdragonMusic \
-    SnapdragonGallery \
-    SnapdragonLauncher
 
 # Display
 PRODUCT_PACKAGES += \
