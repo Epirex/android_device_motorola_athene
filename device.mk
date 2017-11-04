@@ -110,6 +110,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Gestures
 
+# Music
+PRODUCT_PACKAGES += \
+    Phonograph
+
 # Display
 PRODUCT_PACKAGES += \
     gralloc.msm8952 \
