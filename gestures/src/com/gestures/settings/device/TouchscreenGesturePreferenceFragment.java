@@ -20,6 +20,7 @@ package com.gestures.settings.device;
 import android.app.AlertDialog;
 import android.app.NotificationManager;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -34,13 +35,21 @@ import java.io.File;
 import com.gestures.settings.device.FileUtils;
 
 public class TouchscreenGesturePreferenceFragment extends PreferenceFragment {
+    private static final String CATEGORY_FINGER_PRINT = "fp_key";
     private SwitchPreference mFlipPref;
     private NotificationManager mNotificationManager;
+    private static boolean mFpsAvailable =
+            SystemProperties.getBoolean("ro.hw.fps", false);
     private boolean mFlipClick = false;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.gesture_panel);
+        PreferenceCategory fingerPrintCat = (PreferenceCategory)
+                findPreference(CATEGORY_FINGER_PRINT);
+        if (fingerPrintCat != null) {
+            fingerPrintCat.setEnabled(mFpsAvailable);
+        }
         mNotificationManager = (NotificationManager) getActivity().getSystemService(Context.NOTIFICATION_SERVICE);
         mFlipPref = (SwitchPreference) findPreference("gesture_flip_to_mute");
         mFlipPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
