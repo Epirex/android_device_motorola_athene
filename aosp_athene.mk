@@ -13,8 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit some common Citrus CAF stuff.
-$(call inherit-product, vendor/citrus/common.mk)
+# Inherit some common AEX stuff.
+$(call inherit-product, vendor/aosp/common.mk)
 
 $(call inherit-product, device/motorola/athene/full_athene.mk)
 
@@ -25,15 +25,7 @@ TARGET_BOOTANIMATION_HALF_RES := true
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := athene
-PRODUCT_NAME := citrus_athene
+PRODUCT_NAME := aosp_athene
 PRODUCT_BRAND := Motorola
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_RELEASE_NAME := athene
-
-# Citrus-CAF Athene Maintainer
-PRODUCT_BUILD_PROP_OVERRIDES += \
-         DEVICE_MAINTAINERS="Esteban Guzzo (Epirex)"
-
-# CAF REVISION
-PRODUCT_PROPERTY_OVERRIDES += \
-         ro.caf.branch=LA.UM.5.6.r1-05900-89xx.0
